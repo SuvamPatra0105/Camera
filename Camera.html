@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   
+   <style>
+   *{
+   box-sizing:border-box;
+   font-family: "Times New Roman", Times, serif;
+   }
+   #d1, #d2, #d3{
+   background:red;
+   height:20vh;
+   margin:5%;
+   }
+ 
+   .flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  border-bottom-color:#fff;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+a{
+text-decoration:none;
+color:#000;
+margin-left:15px;
+font-weight:bolder;
+margin-bottom:20px;
+}
+a:hover{
+text-decoration:none;
+color:#000;}
+a.left
+{
+    position: relative;
+}
+
+a.left:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  transition: all 0.6s ease-in-out;
+}
+
+a.left:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
+a.middle
+{
+    position: relative;
+}
+
+a.middle:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+a.middle:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+img{
+margin-top:10px;
+}
+.ab{
+padding: 1px;
+background:#bbbbbb96;
+text-align:center;
+border:1px solid #f1f1f0;
+}
+#abb{
+background:#fff;
+width: 100%;
+    padding: 1px 0px 14px 0px;
+margin-top:20px;
+}
+.ab:hover{
+	cursor:pointer;
+	zoom:1.1;
+	padding-left:5px;
+	padding-right:5px;
+	box-shadow:0px 0px 6px black;
+	
+	}
+	.ab:hover img{
+	
+	zoom:1.2;
+	}
+	.ab:hover #abb{
+	border-radius:10%;
+	margin-bottom:5px;
+	box-shadow:0px 0px 6px black;
+	}
+.col-lg-4, .col-md-4, .col-sm-4{
+ width:23.5%;
+	  margin:8px;
+	  margin-left:8px;
+	      
+    }
+	
+	#abb{
+	padding-left:11px;
+	padding-right:11px;
+	}
+	
+	@media (max-width:768px){
+	.col-lg-4, .col-md-4, .col-sm-4{
+ width:85%;
+	}
+	.ab{
+	margin-left:8%;
+	margin-top:21px;
+	}
+	div.ab:nth-child(2), div.ab:nth-child(3), div.ab:nth-child(4){
+		margin-top:20px;
+	}
+	.ab:hover #abb{
+	border-radius:15px;
+	margin-bottom:5px;
+	box-shadow:0px 0px 6px black;
+	}
+	a{
+	margin-left:8%;
+	}
+	}
+	
+	@media (min-width:768px) and (max-width:1024px){
+	.col-lg-4, .col-md-4, .col-sm-4{
+ width:40%;
+	}
+	a{
+	margin-left:6%;
+	}
+	.ab{
+	margin-left:6%;
+	
+	}
+	.ab:hover #abb{
+	border-radius:15px;
+	margin-bottom:5px;
+	box-shadow:0px 0px 6px black;
+	}
+	div.ab:nth-child(1):hover div.ab:nth-child(3){
+	margin-top:-55px;
+	}
+   </style>
+   
+   </head>
+  <body>
+  <div class="container">
+  <div class="row link-background">
+ <b><h1><a href="" class="left">PRODUCTS</a></h1></b>
+  </div>
+  <!-- <div id="d1" class="col-lg-4 col-md-4"></div>
+  <div id="d2" class="col-lg-4 col-md-4"></div> 
+  <div class="flip-card col-lg-4 col-md-4">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="c1.png" alt="Avatar" style="width:200px;height:200px;">
+	  <h1>NIKKOR Z 24-70MM F/2.8 S</h1>
+  <p class="price">Rs. 1,90,000.00 INR</p>
+  <p>Hover on Me to Check</p>
+  <p><button>Add to Cart</button></p>
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+  -->
+   <div class="row link-background">
+ <h3><a href="" class="middle">HIGHEST RATED Z MOUNT LENSES</a></h3>
+  </div>
+   <div class="row" style="margin-top:2px">
+
+  <div class="ab ab1 col-lg-4 col-md-4 col-sm-4" ><img src="c0.png" height="120" width="150"/><div id="abb"><h3>NIKKOR Z 50MM F/1.8 S</h3>
+  <p class="price">₹ 1,90,000.00</p>
+  <p>Hover on Me to Check</p>
+  <p><button>Add to Cart</button></p></div></div>
+  
+  <div class="ab col-lg-4 col-md-4 col-sm-4" ><img src="c2.png" height="120" width="150"/><div id="abb"><h3>NIKKOR Z 35MM F/1.8 S</h3>
+  <p class="price">₹ 66,950.00</p>
+  <p>Hover on Me to Check</p>
+  <p><button>Add to Cart</button></p></div></div>
+ 
+ 
+  <div class="ab col-lg-4 col-md-4 col-sm-4" ><img src="c3.png" height="120" width="150"/><div id="abb"><h3>NIKKOR Z 85MM F/1.8 S</h3>
+  <p class="price">₹ 64,950.00</p>
+  <p>Hover on Me to Check</p>
+  <p><button>Add to Cart</button></p></div></div>
+  
+  <div class="ab col-lg-4 col-md-4 col-sm-4" ><img src="c4.png" height="120" width="150"/><div id="abb"><h3>NIKKOR Z 20MM F/1.8 S</h3>
+  <p class="price">₹ 88,995.00</p>
+  <p>Hover on Me to Check</p>
+  <p><button>Add to Cart</button></p></div></div>
+  
+  </div>
+  </div>
+  </body>
+  </html>
